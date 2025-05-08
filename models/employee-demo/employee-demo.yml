@@ -1,0 +1,31 @@
+# Always include the version - DBT requires it
+version: 2
+
+# Need to define the "models" and "sources"
+models:
+  - name: employee
+    description: "DBT Model for employee table"
+    columns:
+      - name: emp_id
+      # By default, if a test case fails, it is a critical error unless otherwise noted.
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              values: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20']
+              # To keep any failures as a simple warning instead of a critical error 
+              # that will stop the pipeline workflow, configure to only show a warning
+              config:
+                severity: warn
+                
+
+sources:
+  - name: employee
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: EMPLOYEE_RAW
+
+
+
+
