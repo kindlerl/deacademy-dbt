@@ -20,6 +20,11 @@ models:
       - name: emp_salary
         tests:
           - employee_min_salary_check
+  - name: customer
+    description: "DBT Model for the customer table"
+  - name: customer_view
+    description: "DBT Model for the customer view"
+
 
 # As a new test requirement, let's say we need to validate that any emp_salary
 # entered has to be > 10,000.  We cannot perform that type of test using the
@@ -32,6 +37,11 @@ sources:
     schema: PUBLIC
     tables:
       - name: EMPLOYEE_RAW
+  - name: customer
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: CUSTOMER_SRC
 
 
 
