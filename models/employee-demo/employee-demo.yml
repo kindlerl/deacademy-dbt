@@ -17,8 +17,15 @@ models:
               # that will stop the pipeline workflow, configure to only show a warning
               config:
                 severity: warn
-                
+      - name: emp_salary
+        tests:
+          - employee_min_salary_check
 
+# As a new test requirement, let's say we need to validate that any emp_salary
+# entered has to be > 10,000.  We cannot perform that type of test using the
+# out-of-the-box test commands.  So, we need to create a custom test.
+# To do so, go to the "tests" folder and create a "generic" folder to hold all
+# custom test cases.
 sources:
   - name: employee
     database: DBT_DB
