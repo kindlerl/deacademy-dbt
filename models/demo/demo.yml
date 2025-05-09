@@ -30,6 +30,10 @@ models:
     description: "DBT Model for the product table"
   - name: purchase
     description: "DBT Model for the purchase table"
+  - name: clean_orders
+    description: "DBT Model for the clean_orders table"
+  - name: final_orders
+    description: "DBT Model for the final_orders table"
 
 
 # As a new test requirement, let's say we need to validate that any emp_salary
@@ -63,6 +67,11 @@ sources:
     schema: PUBLIC
     tables:
       - name: PURCHASE_SRC
+  - name: orders
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: BASE_ORDERS
 
 
 
