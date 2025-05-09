@@ -7,18 +7,23 @@
     Try changing "table" to "view" below
 */
 
+-- The table name will be created with the same name as this file (my_first_dbt_model)
+-- "dbt run" will simply run both SQL models
+-- "dbt build" will run both SQL models AND run the test cases (in schema.yml)
+-- To run a single model, execute "dbt build --select <model_name>"
+
 {{ config(materialized='table') }}
 
-with source_data as (
+WITH source_data AS (
 
-    select 1 as id
-    union all
-    select null as id
+    SELECT 1 AS id
+    UNION all
+    SELECT null AS id
 
 )
 
-select *
-from source_data
+SELECT *
+FROM source_data
 
 /*
     Uncomment the line below to remove records with null `id` values
