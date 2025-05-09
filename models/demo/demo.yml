@@ -34,6 +34,10 @@ models:
     description: "DBT Model for the clean_orders table"
   - name: final_orders
     description: "DBT Model for the final_orders table"
+  - name: concat_address
+    description: "DBT Model for the address concat"
+  - name: concat_name
+    description: "DBT Model for the name concat"
   
 
 # As a new test requirement, let's say we need to validate that any emp_salary
