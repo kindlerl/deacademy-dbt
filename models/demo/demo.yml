@@ -35,7 +35,6 @@ models:
   - name: final_orders
     description: "DBT Model for the final_orders table"
 
-
 # As a new test requirement, let's say we need to validate that any emp_salary
 # entered has to be > 10,000.  We cannot perform that type of test using the
 # out-of-the-box test commands.  So, we need to create a custom test.
@@ -72,6 +71,11 @@ sources:
     schema: PUBLIC
     tables:
       - name: BASE_ORDERS
+  - name: patient
+    database: DBT_DB
+    schema: PUBLIC
+    tables:
+      - name: PATIENT_SRC
 
 
 
