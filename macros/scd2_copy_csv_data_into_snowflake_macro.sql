@@ -1,7 +1,9 @@
 {% macro scd2_copy_csv_data_into_snowflake_macro(table_nm) %}
  
 delete from {{var ('rawhist_db') }}.{{var ('wrk_schema')}}.{{ table_nm }};
- 
+
+{% do log("Running COPY INTO from stage: " ~ var('stage_name'), info=True) %}
+
 COPY INTO {{var ('rawhist_db') }}.{{var ('wrk_schema')}}.{{ table_nm }} 
 FROM (
     SELECT
@@ -22,7 +24,7 @@ FROM (
     FROM @{{ var('stage_name') }}
 )
 FILE_FORMAT = {{var ('file_format_csv') }}
-PURGE={{ var('purge_status') }}
-;
+PURGE = {{ var('purge_status') }}
+FORCE = TRUE;
  
 {% endmacro %}

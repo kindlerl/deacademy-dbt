@@ -20,7 +20,7 @@ vars:
    wrk_schema: BRONZE
    file_format_csv: SCD2_DB.BRONZE.SCD2_STAGE_CSV_FORMAT
    purge_status: FALSE
-   stage_name: SCD2_DB.BRONZE.SCD2_S3_TEST_STAGE/
+   stage_name: SCD2_DB.BRONZE.SCD2_S3_TEST_STAGE
    rawhist_db: SCD2_DB
 
 # These configurations specify where dbt should look for different types of files.
