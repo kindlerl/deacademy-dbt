@@ -1,6 +1,6 @@
 {{ 
     config({ 
-        "database": 'SCD2_DB',
+        "database": 'PC_DBT_DB',
         "materialized": 'table',
         "transient": true,
         "alias": 'WORK_PRODUCT_TRANSFORM',
