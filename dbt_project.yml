@@ -12,8 +12,8 @@ profile: 'default'
 # Variables
 vars:
   # From the DBT-Glue Project
-   target_db: GLUEDB
-   target_schema: PUBLIC
+  #  target_db: GLUEDB
+  #  target_schema: PUBLIC
   #  stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
 
   # From the SCD2 Project
