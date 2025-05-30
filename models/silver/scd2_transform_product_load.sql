@@ -3,7 +3,7 @@
         "materialized":'table',
         "transient":true,
         "alias":'WORK_PRODUCT_TRANSFORM',
-        "pre_hook": macros_copy_csv('WORK_PRODUCT_COPY'),
+        "pre_hook": scd2_copy_csv_data_into_snowflake_macro('WORK_PRODUCT_COPY'),
         "schema": 'SILVER'
     })
 }}

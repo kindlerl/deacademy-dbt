@@ -1,4 +1,4 @@
-{% macro macros_copy_csv(table_nm) %} 
+{% macro scd2_copy_csv_data_into_snowflake_macro(table_nm) %}
  
 delete from {{var ('rawhist_db') }}.{{var ('wrk_schema')}}.{{ table_nm }};
  
