@@ -57,22 +57,22 @@ models:
     gold:
       schema: gold
       materialized: view
-  my_new_project:
-    # Applies to all files under models/example/
-    project1:
-      bronze:
-        database: PROJECT1_DB
-        schema: BRONZE
-      silver:
-        database: PROJECT1_DB
-        schema: SILVER
-    project2:
-      raw:
-        database: PROJECT2_DB
-        schema: RAW
-      mart:
-        database: PROJECT2_DB
-        schema: MART
+  # my_new_project:
+  #   # Applies to all files under models/example/
+  #   project1:
+  #     bronze:
+  #       database: PROJECT1_DB
+  #       schema: BRONZE
+  #     silver:
+  #       database: PROJECT1_DB
+  #       schema: SILVER
+  #   project2:
+  #     raw:
+  #       database: PROJECT2_DB
+  #       schema: RAW
+  #     mart:
+  #       database: PROJECT2_DB
+  #       schema: MART
 
 
     
