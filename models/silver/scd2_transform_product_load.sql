@@ -1,12 +1,14 @@
 {{ 
-    config({ 
-        "database": 'PC_DBT_DB',
-        "materialized": 'table',
-        "transient": true,
-        "alias": 'WORK_PRODUCT_TRANSFORM',
-        "pre_hook": scd2_copy_csv_data_into_snowflake_macro('WORK_PRODUCT_COPY'),
-        "schema": 'SILVER'
-    })
+    config(
+        { 
+            "database": 'PC_DBT_DB',
+            "materialized": 'table',
+            "transient": true,
+            "alias": 'WORK_PRODUCT_TRANSFORM',
+            "pre_hook": scd2_copy_csv_data_into_snowflake_macro('WORK_PRODUCT_COPY'),
+            "schema": 'SILVER'
+        }
+    )
 }}
  
 WITH transform AS (
