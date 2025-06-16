@@ -4,10 +4,13 @@
 # name or the intended use of these models
 name: 'walmart_e2e_project'
 version: '1.0.0'
+dbt-cloud:
+    project-id: 70471823467129
+
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'default'
+profile: 'walmart_e2e_project'
 
 # Variables
 vars:
