@@ -1,13 +1,10 @@
 version: 2
-sources:
-    - name: source
-      database: SCD2_DB
-      schema: BRONZE
-      tables:
-        - name: WORK_PRODUCT_COPY
 
-    - name: xfm
-      database: PC_DBT_DB
-      schema: SILVER
-      tables:
-        - name: WORK_PRODUCT_TRANSFORM
+sources:
+  - name: walmart
+    database: WALMART_DB
+    schema: BRONZE
+    tables:
+      - name: raw_department
+      - name: raw_stores
+      - name: raw_fact

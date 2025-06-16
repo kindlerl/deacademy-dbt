@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'rlk_dbt_project'
+name: 'walmart_e2e_project'
 version: '1.0.0'
 config-version: 2
 
@@ -17,11 +17,11 @@ vars:
   #  stage_name: GLUEDB.PUBLIC.GLUE_S3_STAGE
 
   # From the SCD2 Project
-   wrk_schema: BRONZE
-   file_format_csv: SCD2_DB.BRONZE.SCD2_STAGE_CSV_FORMAT
-   purge_status: FALSE
-   stage_name: SCD2_DB.BRONZE.SCD2_S3_TEST_STAGE
-   rawhist_db: SCD2_DB
+  #  wrk_schema: BRONZE
+  #  file_format_csv: SCD2_DB.BRONZE.SCD2_STAGE_CSV_FORMAT
+  #  purge_status: FALSE
+  #  stage_name: SCD2_DB.BRONZE.SCD2_S3_TEST_STAGE
+  #  rawhist_db: SCD2_DB
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -50,13 +50,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  rlk_dbt_project:
-    silver:
-      schema: silver
-      materialized: table
-    gold:
-      schema: gold
-      materialized: view
+  # rlk_dbt_project:
+  #   silver:
+  #     schema: silver
+  #     materialized: table
+  #   gold:
+  #     schema: gold
+  #     materialized: view
   # my_new_project:
   #   # Applies to all files under models/example/
   #   project1:

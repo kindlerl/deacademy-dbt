@@ -10,6 +10,10 @@
         }
     )
 }}
+
+-- When this model runs, the "pre-hook" in the config section will run first, copying
+-- data from the S3 bucket into the "WORK_PRODUCT_COPY" table within Snowflake and it 
+-- will copy the data into the "WORK_PRODUCT_TRANSFORM" table in the SILVER schema.
  
 WITH transform AS (
     SELECT 

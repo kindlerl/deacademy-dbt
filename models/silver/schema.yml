@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: walmart_store_dim
+    description: >
+      Slowly changing dimension type 1 table for Walmart store and department info. 
+      Combines store and department information to create the dimensional model.
+    columns:
+      - name: store_id
+        description: Unique identifier for the store
+        tests:
+          - not_null
+
+      - name: dept_id
+        description: Unique identifier for the department
+        tests:
+          - not_null
+
+      - name: store_type
+        description: Format type of the store (A, B, or C)
+
+      - name: store_size
+        description: Square footage of the store
+
+      - name: insert_date
+        description: Timestamp of initial insertion
+
+      - name: update_date
+        description: Timestamp of last update
+
+  
