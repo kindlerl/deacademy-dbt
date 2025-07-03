@@ -3,7 +3,7 @@
         database='WALMART_DB',
         schema='SILVER',
         materialized='table',
-        tags=['silver', 'scd1']
+        tags=['silver', 'scd2']
     )
 }}
 
@@ -35,8 +35,8 @@ fact_data AS (
 ),
 date_lookup AS (
   SELECT
-    date AS date_day,
-    TO_CHAR(date, 'YYYYMMDD')::INT AS date_id
+    store_date AS date_day,
+    TO_CHAR(store_date, 'YYYYMMDD')::INT AS date_id
   FROM
     {{ ref('walmart_date_dim') }}
 )
@@ -48,6 +48,7 @@ SELECT
   f.fuel_price,
   f.store_temperature,
   f.unemployment,
+  f.cpi,
   f.markdown1,
   f.markdown2,
   f.markdown3,

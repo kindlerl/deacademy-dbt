@@ -24,7 +24,7 @@ holiday_flags AS (
 )
 SELECT
   TO_CHAR(d.date_day, 'YYYYMMDD')::INT AS date_id,
-  d.date_day as date,
+  d.date_day as store_date,
   EXTRACT(DAY FROM d.date_day) AS day,
   EXTRACT(WEEK FROM d.date_day) AS week,
   EXTRACT(MONTH FROM d.date_day) AS month,
